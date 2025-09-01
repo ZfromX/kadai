@@ -1,0 +1,384 @@
+*, *::before, *::after {
+    word-break: break-all;
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+
+    list-style: none;
+
+    box-sizing: border-box;
+}
+
+body, div, p, ul, li, th, td, img , h1, h2, form, select {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .Header_Logo {
+        transition: opacity 0.2s;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .Header_Item{
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .Header_Item{
+        transition: opacity 0.2s;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .Header_Bar {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        width: 24px;
+        height: 17px;
+        margin: auto;
+        z-index: 100;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .Header_Bar_Line:first-child {
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .Header_Bar_Line:last-child {
+        top: 100%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .Header_Bar_Line {
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #A2A2A4;
+        transform: translate(0, -50%);
+        border-radius: 10px;
+        transition: top 0.2s, transform 0.2s, opacity 0.3s;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .Header_List {
+        overflow-y: scroll;
+        position: fixed;
+        top: 60px;
+        left: 100%;
+        width: 100%;
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 75px;
+        transition: transform 0.5s;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.8);
+        -webkit-overflow-scrolling: touch;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .Header_Link {
+        padding: 20px 0;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .Header_Link>span:first-child {
+        font-size: 16px;
+        letter-spacing: 5px;
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .Header_Link>span:last-child {
+        font-size: 12px;
+        margin-top: 10px;
+        color: #F79214;
+        letter-spacing: 2px;
+    }
+}
+
+.Header{
+    width: 100%;
+    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    display: grid;
+    height: 70px;
+    width: 100%;
+}
+
+.Header_Normal{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 36px 0 36px;
+    max-width: 100%;
+    position: relative;
+}
+
+.Header_Normal>*:last-child {
+    display: inline-flex;
+}
+
+.Header_Link{
+    display: block;
+}
+
+.Header_Link>span {
+    display: block;
+    font-weight: 700;
+    text-align: center;
+}
+
+.Header_Link>span:first-child {
+
+    font-family: "Lato", sans-serif;
+
+    font-size: 12px;
+    line-height: 14.4px;
+}
+
+.Header_Link>span:last-child {
+    font-size: 10px;
+}
+
+.Header_List{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Header_Logo {
+    align-self: center;
+}
+
+.Header_Logo_PC{
+    display: block;
+    height: 20px;
+    width: auto;
+}
+
+.Header_Item{
+    margin-right: 45px;
+}
+
+.Header_Item:last-of-type {
+    margin-right: 0;
+}
+
+.Header_Button{
+    align-items: center;
+    background-color: #F79214;
+    border: none;
+    border-radius: 38px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 700;
+    height: 64px;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    height: 40px;
+    padding: 0 20px;
+}
+
+/*main*/
+
+@media screen and (max-width: 767px) {
+    .FirstView {
+        height: fit-content;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .FirstView_all {
+        display: none;
+    }
+}
+
+.FirstView_total {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .FirstView_total {
+        display: block;
+        margin-bottom: 7px;
+        width: 100%;
+    }
+}
+
+.FirstView {
+    position: relative;
+    height: 739px;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+img.lazy {
+    min-height: 1px;
+}
+
+.FirstView_all {
+    position: absolute;
+    z-index: -1;
+}
+
+.FirstView_all--left-rectangle {
+    top: -70px;
+    left: 0;
+}
+
+.FirstView_all--right-rectangle {
+    right: 0;
+    bottom: 70px;
+}
+
+.FirstView_all--fill-rectangle {
+    top: 84px;
+    left: -70px;
+}
+
+.FirstView_all--main-visual {
+    top: -70px;
+    right: 0;
+    width: 775px;
+}
+
+
+.FirstView_Comment {
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: 219px;
+}
+
+@media screen and (max-width: 767px) {
+    .FirstView_Comment{
+        padding-top: 0;
+        padding-bottom: 20px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .FirstView_Comment {
+        max-width: none;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .FirstView_Comment {
+        max-width: none;
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+}
+
+.FirstView_Content {
+    position: relative;
+    width: fit-content;
+}
+
+.FirstView_title {
+    color: #333;
+    font-family: "Lato", sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 63px;
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 767px) {
+    .FirstView_title {
+        font-size: 22px;
+        line-height: 36px;
+        position: relative;
+        width: fit-content;
+    }
+}
+
+/*反映されるのは下の方*/
+.FirstViewContent_badge-image {
+    position: absolute;
+    top: -105px;
+    right: -150px;
+}
+@media screen and (max-width: 767px) {
+    .FirstViewContent_badge-image {
+        height: 102px;
+        width: 102px;
+        top: -20px;
+        right: -110px;
+    }
+}
+
+
+.FirstViewContent_button:visited {
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .FirstViewContent_button {
+        transition: opacity 0.2s;
+    }
+}
+
+.FirstViewContent_button {
+    align-items: center;
+    background-color: #F79214;
+    border: none;
+    border-radius: 38px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 700;
+    height: 64px;
+    justify-content: center;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.FirstViewContent_caption {
+    font-size: 12px;
+    line-height: 16px;
+}
+
+p {
+    color: #333;
+}
